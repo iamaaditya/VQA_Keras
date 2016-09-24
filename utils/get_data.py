@@ -11,7 +11,7 @@ import h5py  as hf
 import json
 
 
-def get_data(args):
+def get_train_data(args):
 
     dataset = {}
     train_data = {}
