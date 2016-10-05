@@ -5,7 +5,7 @@ import numpy as np
 from keras.utils import np_utils
 
 # custom
-from utils.get_data import get_test_data, get_train_data
+from utils.get_train_data import get_test_data, get_train_data
 from utils.arguments import get_arguments
 
 
