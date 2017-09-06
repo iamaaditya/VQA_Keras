@@ -10,6 +10,8 @@ import numpy as np
 import h5py  as hf
 import json
 
+def most_common(lst):
+    return max(set(lst), key=lst.count)
 
 def get_train_data(args):
 
@@ -108,7 +110,7 @@ def get_data_test(args):
     for i in xrange(nb_data_test):
         qid = test_data[u'ques_id'][i]
         try : 
-            val_ans_ix =int(ans_to_ix[utils.most_common(val_all_answers_dict[str(qid)])]) -1
+            val_ans_ix =int(ans_to_ix[most_common(val_all_answers_dict[str(qid)])]) -1
         except KeyError:
             count_of_not_found += 1
             val_ans_ix = 480
